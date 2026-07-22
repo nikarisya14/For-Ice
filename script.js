@@ -1,32 +1,33 @@
 let step = 0;
 let isPlaying = false;
-const ytLink = "https://www.youtube.com/embed/5O-31pCmtA8?autoplay=1&loop=1&playlist=5O-31pCmtA8";
 
-// Fungsi untuk Button On/Off Lagu
+// Fungsi untuk Button On/Off Lagu kat atas
 function toggleMusic() {
-  let iframe = document.getElementById("ytAudio");
+  let music = document.getElementById("bgMusic");
   
   if (isPlaying) {
-    iframe.src = ""; // Stop lagu
+    music.pause();
     isPlaying = false;
   } else {
-    iframe.src = ytLink; // Play balik lagu
-    isPlaying = true;
+    music.play().then(() => {
+      isPlaying = true;
+    }).catch(e => console.log("Gagal mainkan audio:", e));
   }
 }
 
-// Fungsi bila tekan button seterusnya
+// Fungsi aliran cerita bila tekan button
 function nextPage() {
   let icon = document.getElementById("icon");
   let title = document.getElementById("title");
   let message = document.getElementById("message");
   let btn = document.getElementById("nextBtn");
-  let iframe = document.getElementById("ytAudio");
+  let music = document.getElementById("bgMusic");
 
-  // Tekan "haii" pertama kali: Auto-play lagu Sempurna
+  // Tekan "haii" pertama kali: Mainkan lagu
   if (step === 0) {
-    iframe.src = ytLink;
-    isPlaying = true;
+    music.play().then(() => {
+      isPlaying = true;
+    }).catch(e => console.log("Browser sekat autoplay:", e));
   }
 
   step++;
