@@ -27,32 +27,32 @@ function nextPage() {
 
   if (step === 1) {
     icon.innerText = "✨";
-    title.innerText = "Ada pesanan khas...";
-    message.innerText = "Saja nak hantar link ni kat kau 🫣";
+    title.innerText = "btw, aku panggil kau ice sbb ice dgn izz cam sama";
+    message.innerText = "MUAHAHAHAHA🫣";
     btn.innerText = "Tekan Sini ➡️";
   } 
   else if (step === 2) {
     icon.innerText = "🙈";
-    title.innerText = "Sebenarnya kan...";
-    message.innerText = "Kau selalu buat aku senyum sorang-sorang tahu tak?";
-    btn.innerText = "Lagi... 💖";
+    title.innerText = "thanks tau";
+    message.innerText = "sbb bagi aku peluang untuk suka kau ";
+    btn.innerText = "AHHH";
   } 
   else if (step === 3) {
     icon.innerText = "💌";
-    title.innerText = "Thank You!";
-    message.innerText = "Terima kasih sebab sentiasa ada dan buat hari-hari aku lebih bermakna.";
-    btn.innerText = "Wish Khas ✨";
+    title.innerText = "goodluck on your study!!";
+    message.innerText = "trust me, kau tk seteruk dari apa yg kau fikir pun";
+    btn.innerText = "last lastt";
   } 
   else if (step === 4) {
     icon.innerText = "🌸";
-    title.innerText = "Wish Untuk Kau";
-    message.innerText = "Semoga segala urusan kau sentiasa dipermudahkan dan bahagia selalu!";
-    btn.innerText = "Habis dah! ❤️";
+    title.innerText = "bye iceeeeeee";
+    message.innerText = "jumpa kat ipg nantiiiiii ";
+    btn.innerText = "19 more days";
   } 
   else {
     icon.innerText = "💖";
     title.innerText = "Hehe That's All!";
-    message.innerText = "Send screenshot ni kat aku kalau dah habis baca 😉";
-    btn.style.display = "none";
+    message.innerText = "thanks bukak link ni, now aku dh boleh hack email kau";
+    btn.style.display = "(nada bergurau)";
   }
 }
