@@ -62,8 +62,8 @@ function nextPage() {
     step = 0;
     icon.innerText = "🧊";
     title.innerText = "haiii 🧊";
-    message.innerText = "Tekan button bawah ni dulu...";
-    btn.innerText = "haii";
+    message.innerText = "aku saje nak test github ni";
+    btn.innerText = "Next";
     btn.style.display = "inline-block";
   }
 }
