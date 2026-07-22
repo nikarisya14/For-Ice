@@ -2,7 +2,7 @@ let step = 0;
 let isPlaying = false;
 
 // Direct Stream Link Lagu Sempurna - Andra & The BackBone
-const audioUrl = "https://files.catbox.moe/q22r9x.mp3";
+const audioUrl = "Sempurna.mp3";
 
 function startMusic() {
   let music = document.getElementById("bgMusic");
