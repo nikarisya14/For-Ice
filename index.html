@@ -8,8 +8,8 @@
 </head>
 <body>
 
-  <!-- Butang Kawalan Muzik Kat Atas Kanan Skrin -->
-  <button id="musicToggle" onclick="toggleMusic()" style="position: fixed; top: 15px; right: 15px; background: rgba(255,255,255,0.8); border: none; padding: 8px 12px; border-radius: 20px; cursor: pointer; font-size: 14px; z-index: 999;">🎵 On/Off Lagu</button>
+  <!-- Button On/Off Muzik kat Atas Kanan -->
+  <button id="musicToggle" onclick="toggleMusic()" style="position: fixed; top: 15px; right: 15px; background: rgba(255, 255, 255, 0.9); border: 1px solid #ffb6c1; padding: 8px 14px; border-radius: 20px; cursor: pointer; font-size: 13px; font-weight: bold; color: #d8698b; z-index: 999; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">🎵 On/Off Lagu</button>
 
   <div class="card" id="card">
     <div class="heart-icon" id="icon">🧊</div>
@@ -18,8 +18,10 @@
     
     <button id="nextBtn" onclick="nextPage()">haii</button>
 
-    <!-- Pautan MP3 alternatif yang stabil -->
-    <audio id="bgMusic" src="https://files.catbox.moe/q22r9x.mp3" loop preload="auto"></audio>
+    <!-- YouTube Audio Player tersembunyi (Lagu Sempurna) -->
+    <div style="display:none;">
+      <iframe id="ytAudio" width="0" height="0" src="" frameborder="0" allow="autoplay"></iframe>
+    </div>
   </div>
 
   <script src="script.js"></script>
