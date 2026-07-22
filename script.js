@@ -73,7 +73,7 @@ function nextPage() {
     step = 0;
     icon.innerText = "👋🏻";
     title.innerText = "haiii 🧊";
-    message.innerText = "aku saje nak test github ni";
+    message.innerText = "aku saje nak test github ni dari: nik yg imut";
     btn.innerText = "Next";
     btn.style.display = "inline-block";
   }
