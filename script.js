@@ -26,13 +26,13 @@ function nextPage() {
   step++;
 
   if (step === 1) {
-    icon.innerText = "✨";
+    icon.innerText = "🧊";
     title.innerText = "btw, aku panggil kau ice sbb ice dgn izz cam sama";
     message.innerText = "MUAHAHAHAHA🫣";
     btn.innerText = "Tekan Sini ➡️";
   } 
   else if (step === 2) {
-    icon.innerText = "🙈";
+    icon.innerText = "🫵";
     title.innerText = "thanks tau";
     message.innerText = "sbb bagi aku peluang untuk suka kau ";
     btn.innerText = "AHHH";
@@ -44,16 +44,22 @@ function nextPage() {
     btn.innerText = "last lastt";
   } 
   else if (step === 4) {
-    icon.innerText = "🌸";
+    icon.innerText = "👨🏻‍🏫";
     title.innerText = "bye iceeeeeee";
     message.innerText = "jumpa kat ipg nantiiiiii ";
     btn.innerText = "19 more days";
+    } 
+  else if (step === 5) {
+    icon.innerText = "🚗";
+    title.innerText = "maafla menggangu kehidupan kau AHHAHAH";
+    message.innerText = "aku bosan+taktau nk buat apa";
+    btn.innerText = "last lasttt";
   } 
-  else if (step === 5) { // <--- DAH FIX KAT SINI (Tambah syarat step === 5)
+  else if (step === 6) { // <--- DAH FIX KAT SINI (Tambah syarat step === 5)
     icon.innerText = "💖";
     title.innerText = "Hehe That's All!";
     message.innerText = "thanks bukak link ni, now aku dh boleh hack email kau";
-    btn.innerText = "Ulang Semula 🔄";
+    btn.innerText = "jkjk";
     btn.style.display = "inline-block"; 
   } 
   else {
