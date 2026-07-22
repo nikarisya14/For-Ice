@@ -7,14 +7,10 @@ function nextPage() {
   let btn = document.getElementById("nextBtn");
   let music = document.getElementById("bgMusic");
 
-  // Mainkan lagu bila tekan button pertama kali (haii)
+  // Mainkan lagu bila tekan button pertama (haii)
   if (step === 0) {
-    music.volume = 1.0; // Set volume penuh
-    music.play().then(() => {
-      console.log("Audio berjaya dimainkan!");
-    }).catch(error => {
-      console.log("Audio terhalang:", error);
-    });
+    music.load(); // Load audio
+    music.play().catch(e => console.log("Audio Error:", e));
   }
 
   step++;
