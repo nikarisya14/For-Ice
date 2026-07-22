@@ -49,10 +49,21 @@ function nextPage() {
     message.innerText = "jumpa kat ipg nantiiiiii ";
     btn.innerText = "19 more days";
   } 
-  else {
+  else if {
     icon.innerText = "💖";
     title.innerText = "Hehe That's All!";
     message.innerText = "thanks bukak link ni, now aku dh boleh hack email kau";
-    btn.style.display = "(nada bergurau)";
+   // Tukar teks button jadi "Ulang Semula" dan pastikan button TIDAK disembunyikan
+    btn.innerText = "Ulang Semula 🔄";
+    btn.style.display = "inline-block"; 
+  } 
+  else {
+    // Bila dah habis dan user tekan "Ulang Semula", reset balik jadi step 0
+    step = 0;
+    icon.innerText = "🧊";
+    title.innerText = "haiii 🧊";
+    message.innerText = "Tekan button bawah ni dulu...";
+    btn.innerText = "haii";
+    btn.style.display = "inline-block";
   }
 }
