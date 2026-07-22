@@ -1,31 +1,32 @@
 let step = 0;
 let isPlaying = false;
+const ytLink = "https://www.youtube.com/embed/5O-31pCmtA8?autoplay=1&loop=1&playlist=5O-31pCmtA8";
 
+// Fungsi untuk Button On/Off Lagu
 function toggleMusic() {
-  let music = document.getElementById("bgMusic");
+  let iframe = document.getElementById("ytAudio");
+  
   if (isPlaying) {
-    music.pause();
+    iframe.src = ""; // Stop lagu
     isPlaying = false;
   } else {
-    music.play();
+    iframe.src = ytLink; // Play balik lagu
     isPlaying = true;
   }
 }
 
+// Fungsi bila tekan button seterusnya
 function nextPage() {
   let icon = document.getElementById("icon");
   let title = document.getElementById("title");
   let message = document.getElementById("message");
   let btn = document.getElementById("nextBtn");
-  let music = document.getElementById("bgMusic");
+  let iframe = document.getElementById("ytAudio");
 
-  // Cuba mainkan lagu pada tekan pertama
+  // Tekan "haii" pertama kali: Auto-play lagu Sempurna
   if (step === 0) {
-    music.play().then(() => {
-      isPlaying = true;
-    }).catch(e => {
-      console.log("Browser sekat auto-play:", e);
-    });
+    iframe.src = ytLink;
+    isPlaying = true;
   }
 
   step++;
