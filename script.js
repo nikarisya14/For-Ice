@@ -1,4 +1,16 @@
 let step = 0;
+let isPlaying = false;
+
+function toggleMusic() {
+  let music = document.getElementById("bgMusic");
+  if (isPlaying) {
+    music.pause();
+    isPlaying = false;
+  } else {
+    music.play();
+    isPlaying = true;
+  }
+}
 
 function nextPage() {
   let icon = document.getElementById("icon");
@@ -7,10 +19,13 @@ function nextPage() {
   let btn = document.getElementById("nextBtn");
   let music = document.getElementById("bgMusic");
 
-  // Mainkan lagu bila tekan button pertama (haii)
+  // Cuba mainkan lagu pada tekan pertama
   if (step === 0) {
-    music.load(); // Load audio
-    music.play().catch(e => console.log("Audio Error:", e));
+    music.play().then(() => {
+      isPlaying = true;
+    }).catch(e => {
+      console.log("Browser sekat auto-play:", e);
+    });
   }
 
   step++;
