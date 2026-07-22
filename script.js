@@ -27,9 +27,9 @@ function nextPage() {
 
   if (step === 1) {
     icon.innerText = "🧊";
-    title.innerText = "btw, aku panggil kau ice sbb ice dgn izz cam sama";
+    title.innerText = "btw, aku nk panggil kau ice sbb ice dgn izz cam sama";
     message.innerText = "MUAHAHAHAHA🫣";
-    btn.innerText = "Tekan Sini ➡️";
+    btn.innerText = "tpi dlm personal je la kot";
   } 
   else if (step === 2) {
     icon.innerText = "🫵";
@@ -39,25 +39,31 @@ function nextPage() {
   } 
   else if (step === 3) {
     icon.innerText = "💌";
-    title.innerText = "goodluck on your study!!";
+    title.innerText = "goodluck in your studies!!";
     message.innerText = "trust me, kau tk seteruk dari apa yg kau fikir pun";
-    btn.innerText = "biar lagu berbicara ah";
-  } 
+    btn.innerText = "hehe:>";
+    } 
   else if (step === 4) {
+    icon.innerText = "🔥";
+    title.innerText = "nak tanyaa";
+    message.innerText = "buat streak tiktok jomm?🫣(nada tidak memaksa)";
+    btn.innerText = "kalau kau tknk pun xpe";
+  } 
+  else if (step === 5) {
     icon.innerText = "👨🏻‍🏫";
     title.innerText = "bye iceeeeeee";
     message.innerText = "jumpa kat ipg nantiiiiii ";
     btn.innerText = "19 more days";
     } 
-  else if (step === 5) {
+  else if (step === 6) {
     icon.innerText = "🚗";
     title.innerText = "maafla menggangu kehidupan kau AHHAHAH";
     message.innerText = "aku bosan+taktau nk buat apa";
     btn.innerText = "last lasttt";
   } 
-  else if (step === 6) { // <--- DAH FIX KAT SINI (Tambah syarat step === 5)
+  else if (step === 7) { // <--- DAH FIX KAT SINI (Tambah syarat step === 5)
     icon.innerText = "💖";
-    title.innerText = "Hehe That's All!";
+    title.innerText = "bye icee🧊";
     message.innerText = "thanks bukak link ni, now aku dh boleh hack email kau";
     btn.innerText = "jkjk";
     btn.style.display = "inline-block"; 
