@@ -1,49 +1,41 @@
 let step = 0;
 let isPlaying = false;
 
-// Dua sumber audio: Local file & Online Direct Stream Backup
-const localAudio = "sempurna.mp3";
-const backupAudio = "https://files.catbox.moe/q22r9x.mp3";
+// Audio Direct Stream Universal (MP3 Reliable Cloud Source)
+const audioUrl = "https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=romantic-piano-112199.mp3";
 
-function playAudio() {
+function startMusic() {
   let music = document.getElementById("bgMusic");
+  if (!music.src) {
+    music.src = audioUrl;
+  }
   
-  // Cuba mainkan fail mp3 dalam repo dulu
-  music.src = localAudio;
   music.play().then(() => {
     isPlaying = true;
-  }).catch(() => {
-    // Jika ada masalah nama fail/404, guna direct stream backup
-    console.log("Fail local bermasalah, menukar ke backup stream...");
-    music.src = backupAudio;
-    music.play().then(() => {
-      isPlaying = true;
-    }).catch(e => console.log("Gagal memutarkan audio:", e));
+  }).catch(err => {
+    console.log("Autoplay blocked, waiting for user click:", err);
   });
 }
 
-// Fungsi Button On/Off Lagu
 function toggleMusic() {
   let music = document.getElementById("bgMusic");
-  
   if (isPlaying) {
     music.pause();
     isPlaying = false;
   } else {
-    playAudio();
+    startMusic();
   }
 }
 
-// Fungsi Aliran Pesanan / Text
 function nextPage() {
   let icon = document.getElementById("icon");
   let title = document.getElementById("title");
   let message = document.getElementById("message");
   let btn = document.getElementById("nextBtn");
 
-  // Tekan "haii" pertama kali: Mainkan lagu
+  // Tekan butang pertama kali -> Paksa audio main melalui user gesture
   if (step === 0) {
-    playAudio();
+    startMusic();
   }
 
   step++;
