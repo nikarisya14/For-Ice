@@ -8,6 +8,9 @@
 </head>
 <body>
 
+  <!-- Butang Kawalan Muzik Kat Atas Kanan Skrin -->
+  <button id="musicToggle" onclick="toggleMusic()" style="position: fixed; top: 15px; right: 15px; background: rgba(255,255,255,0.8); border: none; padding: 8px 12px; border-radius: 20px; cursor: pointer; font-size: 14px; z-index: 999;">🎵 On/Off Lagu</button>
+
   <div class="card" id="card">
     <div class="heart-icon" id="icon">🧊</div>
     <h1 id="title">haiii 🧊</h1>
@@ -15,8 +18,8 @@
     
     <button id="nextBtn" onclick="nextPage()">haii</button>
 
-    <!-- Audio Lagu Sempurna by Andra and The BackBone -->
-  <audio id="bgMusic" src="https://files.catbox.moe/q22r9x.mp3" loop preload="auto"></audio>
+    <!-- Pautan MP3 alternatif yang stabil -->
+    <audio id="bgMusic" src="https://files.catbox.moe/q22r9x.mp3" loop preload="auto"></audio>
   </div>
 
   <script src="script.js"></script>
