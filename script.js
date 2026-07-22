@@ -27,8 +27,8 @@ function nextPage() {
 
   if (step === 1) {
     icon.innerText = "🧊";
-    title.innerText = "btw, aku nk panggil kau ice sbb ice dgn izz cam sama";
-    message.innerText = "MUAHAHAHAHA🫣";
+    title.innerText = "btw, aku nk panggil kau ice sbb ice dgn izz cam sama MUAHAHA";
+    message.innerText = "lgipun perangai kau mmg mcm ice pun🙂‍↕️";
     btn.innerText = "tpi dlm personal je la kot";
   } 
   else if (step === 2) {
@@ -51,7 +51,7 @@ function nextPage() {
   } 
   else if (step === 5) {
     icon.innerText = "👨🏻‍🏫";
-    title.innerText = "bye iceeeeeee";
+    title.innerText = "cikgu icee";
     message.innerText = "jumpa kat ipg nantiiiiii ";
     btn.innerText = "19 more days";
     } 
