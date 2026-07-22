@@ -49,16 +49,15 @@ function nextPage() {
     message.innerText = "jumpa kat ipg nantiiiiii ";
     btn.innerText = "19 more days";
   } 
-  else if {
+  else if (step === 5) { // <--- DAH FIX KAT SINI (Tambah syarat step === 5)
     icon.innerText = "💖";
     title.innerText = "Hehe That's All!";
     message.innerText = "thanks bukak link ni, now aku dh boleh hack email kau";
-   // Tukar teks button jadi "Ulang Semula" dan pastikan button TIDAK disembunyikan
     btn.innerText = "Ulang Semula 🔄";
     btn.style.display = "inline-block"; 
   } 
   else {
-    // Bila dah habis dan user tekan "Ulang Semula", reset balik jadi step 0
+    // Bila tekan "Ulang Semula 🔄", reset balik ke awal
     step = 0;
     icon.innerText = "🧊";
     title.innerText = "haiii 🧊";
