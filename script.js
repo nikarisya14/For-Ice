@@ -2,7 +2,7 @@ let step = 0;
 let isPlaying = false;
 
 // Audio Direct Stream Universal (MP3 Reliable Cloud Source)
-const audioUrl = "https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=romantic-piano-112199.mp3";
+const audioUrl = "sempurna.mp3";
 
 function startMusic() {
   let music = document.getElementById("bgMusic");
