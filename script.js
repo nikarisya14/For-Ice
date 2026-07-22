@@ -35,13 +35,13 @@ function nextPage() {
     icon.innerText = "🫵";
     title.innerText = "thanks tau";
     message.innerText = "sbb bagi aku peluang untuk suka kau ";
-    btn.innerText = "AHHH";
+    btn.innerText = "MUHEHEHE";
   } 
   else if (step === 3) {
     icon.innerText = "💌";
     title.innerText = "goodluck on your study!!";
     message.innerText = "trust me, kau tk seteruk dari apa yg kau fikir pun";
-    btn.innerText = "last lastt";
+    btn.innerText = "biar lagu berbicara ah";
   } 
   else if (step === 4) {
     icon.innerText = "👨🏻‍🏫";
@@ -65,7 +65,7 @@ function nextPage() {
   else {
     // Bila tekan "Ulang Semula 🔄", reset balik ke awal
     step = 0;
-    icon.innerText = "🧊";
+    icon.innerText = "👋🏻";
     title.innerText = "haiii 🧊";
     message.innerText = "aku saje nak test github ni";
     btn.innerText = "Next";
