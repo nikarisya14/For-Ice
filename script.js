@@ -1,7 +1,28 @@
 let step = 0;
 let isPlaying = false;
 
-// Fungsi untuk Button On/Off Lagu
+// Dua sumber audio: Local file & Online Direct Stream Backup
+const localAudio = "sempurna.mp3";
+const backupAudio = "https://files.catbox.moe/q22r9x.mp3";
+
+function playAudio() {
+  let music = document.getElementById("bgMusic");
+  
+  // Cuba mainkan fail mp3 dalam repo dulu
+  music.src = localAudio;
+  music.play().then(() => {
+    isPlaying = true;
+  }).catch(() => {
+    // Jika ada masalah nama fail/404, guna direct stream backup
+    console.log("Fail local bermasalah, menukar ke backup stream...");
+    music.src = backupAudio;
+    music.play().then(() => {
+      isPlaying = true;
+    }).catch(e => console.log("Gagal memutarkan audio:", e));
+  });
+}
+
+// Fungsi Button On/Off Lagu
 function toggleMusic() {
   let music = document.getElementById("bgMusic");
   
@@ -9,31 +30,20 @@ function toggleMusic() {
     music.pause();
     isPlaying = false;
   } else {
-    music.play().then(() => {
-      isPlaying = true;
-    }).catch(e => console.log("Gagal mainkan audio:", e));
+    playAudio();
   }
 }
 
-// Fungsi aliran cerita bila tekan button
+// Fungsi Aliran Pesanan / Text
 function nextPage() {
   let icon = document.getElementById("icon");
   let title = document.getElementById("title");
   let message = document.getElementById("message");
   let btn = document.getElementById("nextBtn");
-  let music = document.getElementById("bgMusic");
 
-  // Tekan "haii" pertama kali: Cuba mainkan lagu tanpa menyekat teks
+  // Tekan "haii" pertama kali: Mainkan lagu
   if (step === 0) {
-    try {
-      music.play().then(() => {
-        isPlaying = true;
-      }).catch(e => {
-        console.log("Autoplay disekat browser, lagu boleh dibuka guna button atas.");
-      });
-    } catch(err) {
-      console.log("Error audio:", err);
-    }
+    playAudio();
   }
 
   step++;
