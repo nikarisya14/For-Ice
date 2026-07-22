@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <!-- Button On/Off Lagu -->
+  <!-- Butang On/Off Lagu Kat Atas Kanan -->
   <button id="musicToggle" onclick="toggleMusic()">🎵 On/Off Lagu</button>
 
   <div class="card" id="card">
@@ -17,11 +17,16 @@
     <p id="message">Tekan button bawah ni dulu...</p>
     
     <button id="nextBtn" onclick="nextPage()">haii</button>
+
+    <!-- Audio Player Rasmi yang Nampak & Comel (Supaya Browser Tak Block) -->
+    <div style="margin-top: 20px;">
+      <audio id="bgMusic" controls style="width: 100%; height: 35px; border-radius: 20px;">
+        <source src="https://files.catbox.moe/q22r9x.mp3" type="audio/mp3">
+        Pelayar anda tidak menyokong audio.
+      </audio>
+    </div>
   </div>
 
-  <!-- Element Audio Direct -->
-  <audio id="bgMusic" loop preload="auto"></audio>
-
- <script src="script.js?v=3"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>
