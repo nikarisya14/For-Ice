@@ -1,7 +1,7 @@
 let step = 0;
 let isPlaying = false;
 
-// Fungsi untuk Button On/Off Lagu kat atas
+// Fungsi untuk Button On/Off Lagu
 function toggleMusic() {
   let music = document.getElementById("bgMusic");
   
@@ -23,11 +23,17 @@ function nextPage() {
   let btn = document.getElementById("nextBtn");
   let music = document.getElementById("bgMusic");
 
-  // Tekan "haii" pertama kali: Mainkan lagu
+  // Tekan "haii" pertama kali: Cuba mainkan lagu tanpa menyekat teks
   if (step === 0) {
-    music.play().then(() => {
-      isPlaying = true;
-    }).catch(e => console.log("Browser sekat autoplay:", e));
+    try {
+      music.play().then(() => {
+        isPlaying = true;
+      }).catch(e => {
+        console.log("Autoplay disekat browser, lagu boleh dibuka guna button atas.");
+      });
+    } catch(err) {
+      console.log("Error audio:", err);
+    }
   }
 
   step++;
