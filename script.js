@@ -7,14 +7,18 @@ function nextPage() {
   let btn = document.getElementById("nextBtn");
   let music = document.getElementById("bgMusic");
 
-  // Mainkan muzik bila dia tekan "haii" buat pertama kali
+  // Mainkan lagu bila tekan button pertama kali (haii)
   if (step === 0) {
-    music.play().catch(e => console.log("Audio play blocked"));
+    music.volume = 1.0; // Set volume penuh
+    music.play().then(() => {
+      console.log("Audio berjaya dimainkan!");
+    }).catch(error => {
+      console.log("Audio terhalang:", error);
+    });
   }
 
   step++;
 
-  // Bila tekan "haii", baru masuk babak seterusnya
   if (step === 1) {
     icon.innerText = "✨";
     title.innerText = "Ada pesanan khas...";
@@ -43,6 +47,6 @@ function nextPage() {
     icon.innerText = "💖";
     title.innerText = "Hehe That's All!";
     message.innerText = "Send screenshot ni kat aku kalau dah habis baca 😉";
-    btn.style.display = "none"; // Sembunyikan button bila dah tamat
+    btn.style.display = "none";
   }
 }
