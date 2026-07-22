@@ -1,45 +1,26 @@
 let step = 0;
-let isPlaying = false;
 
-// Direct Stream Link Lagu Sempurna - Andra & The BackBone
-const audioUrl = "Sempurna.mp3";
-
-function startMusic() {
-  let music = document.getElementById("bgMusic");
-  
-  // Setkan source jika belum ada
-  if (!music.src  music.src === ""  !music.src.includes("catbox")) {
-    music.src = audioUrl;
-  }
-  
-  // Paksa mainkan lagu
-  music.play().then(() => {
-    isPlaying = true;
-    console.log("Lagu Sempurna berjaya dimainkan!");
-  }).catch(err => {
-    console.log("Sekatan autoplay browser, tunggu klik seterusnya:", err);
-  });
-}
-
+// Fungsi Button On/Off Lagu kat Atas Kanan
 function toggleMusic() {
   let music = document.getElementById("bgMusic");
-  if (isPlaying) {
-    music.pause();
-    isPlaying = false;
+  if (music.paused) {
+    music.play();
   } else {
-    startMusic();
+    music.pause();
   }
 }
 
+// Fungsi Cerita Bila Tekan Button "haii"
 function nextPage() {
   let icon = document.getElementById("icon");
   let title = document.getElementById("title");
   let message = document.getElementById("message");
   let btn = document.getElementById("nextBtn");
+  let music = document.getElementById("bgMusic");
 
-  // Tekan button "haii" pertama kali -> On kan lagu
+  // Cuba pasang lagu masa tekan "haii" pertama kali
   if (step === 0) {
-    startMusic();
+    music.play().catch(e => console.log("User perlu tekan play manual:", e));
   }
 
   step++;
