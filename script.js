@@ -1,19 +1,23 @@
 let step = 0;
 let isPlaying = false;
 
-// Audio Direct Stream Universal (MP3 Reliable Cloud Source)
-const audioUrl = "sempurna.mp3";
+// Direct Stream Link Lagu Sempurna - Andra & The BackBone
+const audioUrl = "https://files.catbox.moe/q22r9x.mp3";
 
 function startMusic() {
   let music = document.getElementById("bgMusic");
-  if (!music.src) {
+  
+  // Setkan source jika belum ada
+  if (!music.src  music.src === ""  !music.src.includes("catbox")) {
     music.src = audioUrl;
   }
   
+  // Paksa mainkan lagu
   music.play().then(() => {
     isPlaying = true;
+    console.log("Lagu Sempurna berjaya dimainkan!");
   }).catch(err => {
-    console.log("Autoplay blocked, waiting for user click:", err);
+    console.log("Sekatan autoplay browser, tunggu klik seterusnya:", err);
   });
 }
 
@@ -33,7 +37,7 @@ function nextPage() {
   let message = document.getElementById("message");
   let btn = document.getElementById("nextBtn");
 
-  // Tekan butang pertama kali -> Paksa audio main melalui user gesture
+  // Tekan button "haii" pertama kali -> On kan lagu
   if (step === 0) {
     startMusic();
   }
